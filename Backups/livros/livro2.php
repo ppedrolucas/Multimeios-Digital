@@ -1,19 +1,10 @@
-<?php
-ob_start(); //ARMAZENA MEUS DADOS EM CACHE
-session_start(); //INICIA A SESSÃO
-if(!isset($_SESSION['loginUser']) && (!isset($_SESSION['senhaUser']))){
-    header("Location: livro1.php?acao=negado");
-    exit;
-}
-include_once('../admin/sair.php')
-?>
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multimeios Digital | Assuntos Diversos</title>
+    <title>Multimeios Digital | Biografia</title>
     <script src="https://kit.fontawesome.com/1e32b8079d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../MyCss/style.css">
 </head>
@@ -21,14 +12,14 @@ include_once('../admin/sair.php')
     
     <header>
         <div class="titulo">
-        <h1>Assuntos Diversos</h1>
+        <h1>Biografia</h1>
         </div>
     </header>
     <section class="banner">
     <?php
            
            include_once('../config/conexao.php');
-           $select = "SELECT * FROM livros WHERE cateLivro = 'ASSUNTOS DIVERSOS'";
+           $select = "SELECT * FROM livros WHERE cateLivro = 'BIOGRAFIA'";
            try{
                $resultado = $conect->prepare($select);
                $resultado->execute();
@@ -46,7 +37,7 @@ include_once('../admin/sair.php')
                         <h5>local: <?php echo $show->localLivro;?></h5>
                         <h5>editora: <?php echo $show->editLivro;?></h5>
                         <h5>ano de publicação: <?php echo $show->anoLivro;?></h5>
-                        <button name="btnAlocar" type="submit"><a href="../admin/alocar.php?idLivro=<?php echo $show->idLivro;?>">Alocar</a></button>
+                        <button name="btn" type="submit"><a href="../admin/alocar.php?idLivro=<?php echo $show->idLivro;?>">Alocar</a></button>
                     </div>
                </article>
             </div>
@@ -64,9 +55,7 @@ include_once('../admin/sair.php')
                 }catch(PDOException $e){
                 echo '<strong>ERRO DE PDO= </strong>'.$e->getMessage();
                 }
-                ?>
-                
-
-    </section>   
+                ?>          
+    </section>
 </body>
 </html>

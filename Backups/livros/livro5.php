@@ -1,19 +1,10 @@
-<?php
-ob_start(); //ARMAZENA MEUS DADOS EM CACHE
-session_start(); //INICIA A SESSÃO
-if(!isset($_SESSION['loginUser']) && (!isset($_SESSION['senhaUser']))){
-    header("Location: livro1.php?acao=negado");
-    exit;
-}
-include_once('../admin/sair.php')
-?>
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multimeios Digital | Assuntos Diversos</title>
+    <title>Multimeios Digital | REDAÇÃO</title>
     <script src="https://kit.fontawesome.com/1e32b8079d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../MyCss/style.css">
 </head>
@@ -21,14 +12,14 @@ include_once('../admin/sair.php')
     
     <header>
         <div class="titulo">
-        <h1>Assuntos Diversos</h1>
+        <h1>Redação</h1>
         </div>
     </header>
     <section class="banner">
     <?php
            
            include_once('../config/conexao.php');
-           $select = "SELECT * FROM livros WHERE cateLivro = 'ASSUNTOS DIVERSOS'";
+           $select = "SELECT * FROM livros WHERE cateLivro = 'Redação/Gramática/ Análises textuais/  Redação no Enem'";
            try{
                $resultado = $conect->prepare($select);
                $resultado->execute();
@@ -54,9 +45,9 @@ include_once('../admin/sair.php')
                     }
                 }else{
                     echo '<div class="container">
-                            <div class="alert alert-danger alert-dismissible">
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <h5><i class="icon fas fa-check"></i> Ops!</h5>
+                            
+                    
+                            <h5>Ops!</h5>
                             Não há livros cadastrados !!!
                             </div>
                         </div>';
@@ -65,8 +56,6 @@ include_once('../admin/sair.php')
                 echo '<strong>ERRO DE PDO= </strong>'.$e->getMessage();
                 }
                 ?>
-                
-
     </section>   
 </body>
 </html>

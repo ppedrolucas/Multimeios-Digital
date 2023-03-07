@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aloque seu livro</title>
+    <title>Cadastro para administrador</title>
     <script src="https://kit.fontawesome.com/1e32b8079d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="alocar.css" type="text/css">
     <style>
         *{ 
     margin: 0;
@@ -80,6 +79,10 @@ button{
 button:hover{
     background-color: darkgreen;
 }
+a{
+    color: green;
+    text-decoration: none;
+}
 @media (max-width: 700px){
     header{
         flex-direction: column;
@@ -91,67 +94,65 @@ button:hover{
     </style>
 </head>
 <body class="banner">
+    
+    
+    
+        
     <div class="container">
         <div class="card">
-                    <h2>Preencha com seu dados para confirmar<br> que deseja alocar este livro</h2>
+                    <h2>Cadastre-se para ser Administrador</h2>
                     
                             <form class="editar" action="" method="post" enctype="multipart/form-data">
-                                
                                     <div class="label-float">
                                         <label for="">Nome Completo</label>
                                         <input name="nome" type="text"/>
                                     </div>
-                                    
                                     <div class="label-float">
-                                        <label for="">Matrícula</label>
-                                        <input name="matricula" type="text"/>
-                                    </div class="botao">
-                                    <button name="btnlogin" class="btn" type="submit">Alocar</button>
+                                        <label for="">E-mail</label>
+                                        <input name="email" type="email"/>
+                                    </div>
+                                    <div class="label-float">
+                                        <label for="">Telefone</label>
+                                        <input name="tel" type="phone"/>
+                                    </div>
+                                    <div class="label-float">
+                                        <label for="">senha</label>
+                                        <input name="senha" type="password"/>
+                                    </div>
+                                    <button name="btnCContato" class="btn" type="submit">Cadastrar</button>
+                                    <a href="index.php">Voltar Para Login</a>
                                 </form>
                                 <?php
                                     include_once('../config/conexao.php');
-                                    if(isset($_POST['btnlogin'])){
-                                        $data= date('Y-m-d');
+                                    if(isset($_POST['btnCContato'])){
                                         $nome=$_POST['nome'];
-                                        $senha=$_POST['matricula'];
-                                        $idLi=$_GET['idLivro'];
-                                        $select="INSERT INTO alocados(data,nomeUser,matricula,livro) VALUES(:data,:nome,:matricula,:idLivro)";
-                                        
+                                        $email=$_POST['email'];
+                                        $tel=$_POST['tel'];
+                                        $senha=$_POST['senha'];
+                                        $cadastro="INSERT INTO tbadm(nomeAdm,emailAdm,telAdm,senhaAdm) VALUES(:nome,:email,:tel,:senha)";                   
                                         try {
-                                          $rodo = $conect->prepare($select);
-                                          $rodo->bindParam(':data',$data, PDO::PARAM_STR);
-                                          $rodo->bindParam(':nome',$nome, PDO::PARAM_STR);
-                                          $rodo->bindParam(':matricula',$senha, PDO::PARAM_STR);
-                                          $rodo->bindParam(':idLivro',$idLi, PDO::PARAM_STR);
-                                          $rodo->execute();
-
-                                          $contar=$rodo->rowCount();
+                                          $result = $conect->prepare($cadastro);
+                                          $result->bindParam(':nome',$nome, PDO::PARAM_STR);
+                                          $result->bindParam(':email',$email, PDO::PARAM_STR);
+                                          $result->bindParam(':tel',$tel, PDO::PARAM_STR);
+                                          $result->bindParam(':senha',$senha, PDO::PARAM_STR);
+                                          $result->execute();
+                            
+                                          $contar=$result->rowCount();
                                           if($contar > 0){
                                                 echo ' <h5>OK!</h5>
-                                                          livro alocado com sucesso !!!';
+                                                          contato cadastrado com sucesso !!!';
                                               }else{
                                                 echo '<h5>Ops!</h5>
-                                                        não foi possível alocar este livro !!!';
+                                                        contato não cadastrado !!!';
                                               }
-                                              $contar = $rodo->rowCount();
-                                            if($contar>0){
-                                                header("Refresh: 2, ../home.php");
-                                            }else{
-                                                header("Refresh: 2, ../home.php");
-                                            }
                                           }catch (PDOException $e){
                                             echo"<strong> ERRO DE CADASTRO PDO = </strong>". $e->getMessage();
                                           }
                                     }
-                                    ?>
+                                    ?>                 
          </div>
     </div>
-                <script>
-                // Verifica se a resposta do servidor contém a string "Registro bem sucedido"
-                if (document.body.innerHTML.indexOf("<h5>OK!</h5> livro alocado com sucesso !!!") !== -1) {
-                    // Se a string foi encontrada, oculta a div
-                    document.getElementById("idLivro").style.display = "none";
-                }
-                </script>
+
 </body>
 </html>

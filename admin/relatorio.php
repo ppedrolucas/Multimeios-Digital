@@ -228,17 +228,15 @@ header.banner{
                           while($show = $resultado->FETCH(PDO::FETCH_OBJ)){   
                     ?>
                     <tr>
-                    <td style="vertical-align:middle;"><?php echo $show->idLivro;?></td>
-                    <td style="vertical-align:middle;"><?php echo $show->nomeLivro;?></td>
-                    <td style="vertical-align:middle;"><?php echo $show->autorLivro;?></td>
-                    <td style="vertical-align:middle;"><?php echo $show->volLivro;?></td>
-                    <td style="vertical-align:middle;"><?php echo $show->localLivro;?></td>
-                    <td style="vertical-align:middle;"><?php echo $show->editLivro;?></td>
-                    <td style="vertical-align:middle;"><?php echo $show->anoLivro;?></td>
-                    <td style="vertical-align:middle;"><?php echo $show->cateLivro;?></td>
-
-
-                    <td style="vertical-align:middle; text-align:center">
+                    <td style="vertical-align:middle; align-items: center"><?php echo $show->idLivro;?></td>
+                    <td style="vertical-align:middle; align-items: center"><?php echo $show->nomeLivro;?></td>
+                    <td style="vertical-align:middle; align-items: center"><?php echo $show->autorLivro;?></td>
+                    <td style="vertical-align:middle; align-items: center"><?php echo $show->volLivro;?></td>
+                    <td style="vertical-align:middle; align-items: center"><?php echo $show->localLivro;?></td>
+                    <td style="vertical-align:middle; align-items: center"><?php echo $show->editLivro;?></td>
+                    <td style="vertical-align:middle; align-items: center"><?php echo $show->anoLivro;?></td>
+                    <td style="vertical-align:middle; align-items: center"><?php echo $show->cateLivro;?></td>
+                    <td style="vertical-align:middle; text-align:center; display:flex">
                       <a href="edit_book.php?id=<?php echo $show->idLivro;?>" class="btn btn-success" title="Editar"><img src="../img/svg/editar.png" alt="" width="20px"></a>
                       <a href="delLivro.php?idDel=<?php echo $show->idLivro;?>" class="btn btn-danger" title="Remover" onclick="return confirm('Deseja realmente remover <?php echo $show->nomeLivro;?> do sistema ?')"><img src="../img/svg/remover.png" alt="" width="20px"></a>
                     </td>

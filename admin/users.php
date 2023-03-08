@@ -17,7 +17,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/styles.css" rel="stylesheet" />
         <style>
-header.banner{
+            header.banner{
                     background: url(../img/testeLivros.png);
                     height: 100%;
                     background-repeat: no-repeat;
@@ -26,8 +26,7 @@ header.banner{
                     color: #fff;
                     text-align: center;
                     padding: 150px 0;
-    
-}
+            }
         </style>
         
     </head>
@@ -185,8 +184,8 @@ header.banner{
                     <td style="vertical-align:middle;"><?php echo $show->matricula;?></td>
                     <td style="vertical-align:middle;"><?php echo $show->turmaAluno;?></td>
                     <td style="vertical-align:middle; text-align:center">
-                      <a href="update_perfil.php?id=<?php echo $show->idAluno;?>" class="btn btn-success" title="Editar">Editar</a>
-                      <a href="del.php?idDel=<?php echo $show->idAluno;?>" class="btn btn-danger" title="Remover" onclick="return confirm('Deseja remover o usuário <?php echo $show->nomeAluno;?>?')">Remover</a>
+                      <a href="update_perfil.php?id=<?php echo $show->idAluno;?>" class="btn btn-success" title="Editar"><img src="../img/svg/editar.png" alt="" srcset="" width="20px" ></a>
+                      <a href="del.php?idDel=<?php echo $show->idAluno;?>" class="btn btn-danger" title="Remover" onclick="return confirm('Deseja remover o usuário <?php echo $show->nomeAluno;?>?')"><img src="../img/svg/remover.png" alt="" srcset="" width="20px" ></a>
                     </td>
                   </tr>
                   <?php

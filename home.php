@@ -8,31 +8,37 @@ if(!isset($_SESSION['loginUser']) && (!isset($_SESSION['senhaUser']))){
 include_once('sair.php')
 ?>
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multimeios Digital | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1e32b8079d.js" crossorigin="anonymous"></script>
     
     <style>
         *{ 
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
 }
 /*MENU*/
 header{
     background: #23232e;
     width: 100%;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 100px;
     position: fixed;
-    
+    padding: 0 25px;
+}
+h1{
+    font-size: 30px;
 }
 header h1, i{
     color: #fff;
@@ -49,13 +55,8 @@ nav li a{
     font-size: 20px;
 }
 nav li a:hover{
-    color:rgb(30, 255, 0) ;
+    color: #16FF00;
 }
-nav li{
-    margin: 0 30px;
-}
-
-
 /*BANNER*/
 section.banner{
     background: url(img/testeLivros.png);
@@ -66,8 +67,8 @@ section.banner{
     color: #fff;
     text-align: center;
     padding: 150px 0;
-    
 }
+
 /*SOBRE*/
 .sobre{
     padding: 120px 100px;
@@ -102,12 +103,12 @@ div.colunas{
 div.colunas img{
     border-radius: 8px;
 }
-
 div.colunas a{
     text-decoration: none;
+    color: #16FF00;
 }
 div.colunas a:hover{
-    color:rgb(30, 255, 0) ;
+    color: #367E18;
 }
 div.colunas2{
     display: flex;
@@ -126,10 +127,14 @@ div.colunas2 a{
 /*RODAPE*/
 footer div.insta{
     background: #23232e;
-    color: rgb(255, 255, 255);
-    padding: 40px 0;
+    color: #fff;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-family:'Opens sans';  
+      
 }
 div.insta h4{
     font-size: 20px;
@@ -166,12 +171,12 @@ div.insta a:hover{
         </nav>
     </header>
     <section class="banner">
-    <div class="container d-flex align-items-center flex-column">
+    <div class="box">
                
                <img style="width: 190px; border-radius: 100%; margin-bottom: 80px" src="img/l0g02.png" alt="..." />
                <!-- Masthead Heading-->
-               <h1 class="masthead-heading text-uppercase mb-0">Multimeios</h1>
-               <p class="masthead-subheading font-weight-light mb-0">E.E.E.P José Maria Falcão</p>
+               <h1>Multimeios</h1>
+               <p>E.E.E.P José Maria Falcão</p>
            </div>
     </section>
     <section class="sobre">
@@ -278,8 +283,9 @@ div.insta a:hover{
     </section>
     <footer>
         <div class="insta">
-            <h4>Estamos no instagram!</h4>
-            <a href="https://instagram.com/multimeios_jmf?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <!--<h4>Estamos no instagram!</h4>
+            <a href="https://instagram.com/multimeios_jmf?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram"></i></a>-->
+            <p>Todos os direitos reservados</p>
         </div>
     </footer>
 </body>

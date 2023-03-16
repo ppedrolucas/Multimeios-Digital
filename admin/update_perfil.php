@@ -5,81 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style-form.css">
     <title>Multimeios Digital | Editar Perfil</title>
     <script src="https://kit.fontawesome.com/1e32b8079d.js" crossorigin="anonymous"></script>
-    <style>
-        *{ 
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    box-sizing: border-box;
-}
-
-/*BANNER*/
-section.banner{
-    background: url(../img/testeLivros.png);
-    height: 800px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #2c3e50;
-    
-    padding: 150px 0;
-    
-}
-/*FORMULÁRIO*/
-.container{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-.card{
-    background-color: #ffffff85;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 3px 3px 3px 0;
-}
-h2{
-    text-align: center;
-    margin-bottom: 20px;
-}
-input, select{
-    width: 100%;
-    padding: 5px;
-    display: inline-block;
-    border: 0;
-    border-bottom: 1px solid #2c3e50;
-    background-color: transparent;
-    outline: none;
-    min-width: 180px;
-    font-size: 16px;
-    transition: all .3s ease-out;
-    border-radius: 0;
-}
-.label-float{
-    position: relative;
-    padding-top: 13px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-
-}
-button{
-    background-color: green;
-    border: 0;
-    border-radius: 6px;
-    color: #fff;
-    padding: 10px;
-    font-size: 12pt;
-    cursor: pointer;
-}
-button:hover{
-    background-color: darkgreen;
-}
-
-    </style>
 </head>
-<body>
-    <section class="banner">
+<body class="banner">    
+    
     <div class="container">
         <?php
         include_once('../config/conexao.php');
@@ -166,7 +97,7 @@ button:hover{
                                               }else{
                                                 echo '<h5>Ops!</h5>
                                                         usuário não editado !!!';
-                                              }                                           
+                                              }
                                           }catch (PDOException $e){
                                             echo"<strong> ERRO DE CADASTRO PDO = </strong>". $e->getMessage();
                                           }
@@ -174,6 +105,6 @@ button:hover{
                                     ?>
          </div>
     </div>
-    </section>
+    
 </body>
 </html>

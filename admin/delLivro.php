@@ -10,9 +10,9 @@ if(isset($_GET['idDel'])){
 		//Retorno dinâmico a página de relatório
 		$contar = $resultDel->rowCount();
 		if($contar>0){
-			header("Location: relatorio.php");
+			header("Location: books.php");
 		}else{
-			header("Location: relatorio.php");
+			header("Location: books.php");
 		}
 	}catch(PDOException $e){
         echo "<strong>ERRO DE DELETE: </strong>".$e->getMessage();

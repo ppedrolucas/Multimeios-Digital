@@ -2,13 +2,13 @@
 ob_start(); //ARMAZENA MEUS DADOS EM CACHE
 session_start(); //INICIA A SESSÃO
 if(!isset($_SESSION['loginUser']) && (!isset($_SESSION['senhaUser']))){
-    header("Location: admin.php?acao=negado");
+    header("Location: index.php?acao=negado");
     exit;
 }
 include_once('sair.php')
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,6 +27,7 @@ header{
     
     background: #343440;
     width: 100%;
+    height:100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,7 +122,7 @@ div.coluna{
             <div class="coluna">
                <article>
                 <div>
-                    <a href="relatorio.php">
+                    <a href="books.php">
                         <i class="fa-solid fa-book"></i>
                         <h1>Livros</h1>
                     </a>
@@ -131,7 +132,7 @@ div.coluna{
             <div class="coluna">
                <article>
                 <div>
-                    <a href="historico.php">
+                    <a href="history.php">
                     <i class="fa-solid fa-book"></i>
                         <h1>Histórico</h1>
                     </a>
@@ -139,6 +140,10 @@ div.coluna{
                </article>
             </div>
     </section>
+    <?php
     
+    include_once('../includes/footer.php');
+
+    ?>
 </body>
 </html>

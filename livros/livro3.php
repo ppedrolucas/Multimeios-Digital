@@ -56,6 +56,13 @@
                 echo '<strong>ERRO DE PDO= </strong>'.$e->getMessage();
                 }
                 ?>
-    </section>   
+    </section>
+    <footer>
+    <?php
+        
+        include_once('../includes/footer.php');
+        
+        ?>
+    </footer>     
 </body>
 </html>

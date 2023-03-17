@@ -49,7 +49,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form action="" method="post">
+                  <form action="" method="post" enctype="multipart/form-data">
                     <div class="txt_field">
                       <input type="text" name="nome" required>
                       <span></span>
@@ -81,16 +81,15 @@
                       <label for="">Ano de publicação</label>
                     </div>
                     <div class="txt_field">
-                      <input type="text" name="categori" required>
+                      <input type="text" name="categoria" required>
                       <span></span>
                       <label for="">Categoria</label>
                     </div>
-                    <button type="submit" name="btnCad" class="btn btn-primary">Adicionar</button>
+                    <button type="submit" name="btnAdd" class="btn btn-primary">Adicionar</button>
                   </form>
-                </div>
-                <?php
+                  <?php
                         include_once('../config/conexao.php');
-                        if(isset($_POST['btnCad'])){
+                        if(isset($_POST['btnAdd'])){
                           $nome=$_POST['nome'];
                           $autor=$_POST['autor'];
                           $volume=$_POST['volume'];
@@ -99,7 +98,7 @@
                           $ano=$_POST['ano'];
                           $categoria=$_POST['categoria'];
                           
-                              $cadastro="INSERT INTO Livros(nomeLivro,autorLivro,volLivro,localLivro,editLivro,anoLivro,cateLivro) VALUES(:nome,:autor,:volume,:local,:editora,:ano,:categoria)";                  
+                              $cadastro="INSERT INTO livros(nomeLivro,autorLivro,volLivro,localLivro,editLivro,anoLivro,cateLivro) VALUES(:nome,:autor,:volume,:local,:editora,:ano,:categoria)";                  
                                try{
                                 $result=$conect-> prepare ($cadastro);
                                 $result->bindParam(':nome',$nome,PDO::PARAM_STR);
@@ -130,7 +129,8 @@
                               }
                         }
                         ?>
-              </div>
+                </div>
+                </div>
             </div>
           </div>
       </div>
@@ -151,7 +151,7 @@
               </thead>
               <tbody>
               <?php
-                      $select = "SELECT * FROM Livros ORDER BY idLivro DESC LIMIT 30 ";
+                      $select = "SELECT * FROM livros ORDER BY idLivro DESC LIMIT 50 ";
                       try{
                         $resultado = $conect->prepare($select);
                         $resultado->execute();

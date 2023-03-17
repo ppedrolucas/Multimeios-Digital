@@ -26,8 +26,8 @@ if(isset($_SESSION['loginUser']) && (isset($_SESSION['senhaUser']))){
                             <form class="editar" action="" method="post" enctype="multipart/form-data">
                                 
                                     <div class="label-float">
-                                        <label for="">E-mail</label>
-                                        <input name="email" type="email"/>
+                                        <label for="">Username</label>
+                                        <input name="nome" type="text"/>
                                     </div>
                                     
                                     <div class="label-float">
@@ -35,23 +35,23 @@ if(isset($_SESSION['loginUser']) && (isset($_SESSION['senhaUser']))){
                                         <input type="password" onkeypress="$(this).mask('000000')" name="senha"/>
                                     </div>
                                     <button name="btnlogin" class="btn" type="submit">Entrar</button>
-                                    <a href="cad_adm.php">Torne-se um Administrador</a>
+                                    <a href="cad_adm.php">Torne-se Adm</a>
                                 </form>
                                 <?php
                                     include_once('../config/conexao.php');
                                     if(isset($_POST['btnlogin'])){
-                                        $login=$_POST['email'];
+                                        $login=$_POST['nome'];
                                         $senha=$_POST['senha'];
-                                        $select="SELECT * FROM tbadm WHERE emailAdm=:emailLogin AND senhaAdm=:senhaLogin";
+                                        $select="SELECT * FROM tbadm WHERE nomeAdm=:nomeLogin AND senhaAdm=:senhaLogin";
                                         try {
                                           $resultLogin = $conect->prepare($select);
-                                          $resultLogin->bindParam(':emailLogin',$login, PDO::PARAM_STR);
+                                          $resultLogin->bindParam(':nomeLogin',$login, PDO::PARAM_STR);
                                           $resultLogin->bindParam(':senhaLogin',$senha, PDO::PARAM_STR);
                                           $resultLogin->execute();
                               
                                           $verificar = $resultLogin->rowCount();
                                           if ($verificar>0) {
-                                            $login=$_POST['email'];
+                                            $login=$_POST['nome'];
                                             $senha=$_POST['senha'];
                                             //CRIAR SESSAO »»
                                             $_SESSION['loginUser'] = $login;

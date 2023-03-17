@@ -24,12 +24,12 @@
                                         <input name="nome" type="text"/>
                                     </div>
                                     <div class="label-float">
-                                        <label for="">E-mail</label>
-                                        <input name="email" type="email"/>
-                                    </div>
-                                    <div class="label-float">
                                         <label for="">Telefone</label>
                                         <input name="tel" type="phone"/>
+                                    </div>
+                                    <div class="label-float">
+                                        <label for="">E-mail</label>
+                                        <input name="email" type="email"/>
                                     </div>
                                     <div class="label-float">
                                         <label for="">senha</label>

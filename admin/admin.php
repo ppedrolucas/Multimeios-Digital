@@ -90,7 +90,7 @@ div.coluna{
 <body >
 <header class="kabessalio">
                                      
-        <h1>Central dos administradores</h1>
+        <h1>Olá <?php echo $_SESSION['loginUser']?>, bem-vindo a central de administração</h1>
         
         <nav>
             <ul>

@@ -162,7 +162,7 @@ div.insta a:hover{
     
     <header>
 
-        <h1 class="cartaoPostal">Seja bem-vindo(a) ao centro de Multimeios digital!</h1>
+        <h1 class="cartaoPostal">Olá <?php echo $_SESSION['loginUser']?>, seja bem-vindo a Multimeios digital!</h1>
         
         <nav>
             <ul>
@@ -175,7 +175,7 @@ div.insta a:hover{
                
                <img style="width: 190px; border-radius: 100%; margin-bottom: 80px" src="img/l0g02.png" alt="..." />
                <!-- Masthead Heading-->
-               <h1>Multimeios</h1>
+               <h1>Multimeios Digital</h1>
                <p>E.E.E.P José Maria Falcão</p>
            </div>
     </section>

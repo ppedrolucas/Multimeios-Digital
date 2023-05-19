@@ -61,9 +61,20 @@
                       <label for="">Matrícula</label>
                     </div>
                     <div class="txt_field">
-                      <input type="text" id="meu-campo-de-entrada" name="turma" required>
-                      <span></span>
-                      <label>Turma</label>
+                    <span></span>
+                      <label for="">Turma</label>
+                    <select class="form-select" name="turma" aria-label="Default select example">
+                      <option selected> </option>
+                      <option>3#INFORMÁTICA</option>
+                      <option>3#ENFERMAGEM</option>
+                      <option>3#SEC. ESCOLAR</option>
+                      <option>3#COMÉRCIO</option>
+                      <option>2#ADM</option>
+                      <option>2#INFOR</option>
+                      <option>2#ENFER</option>
+                      <option>1#ADM</option>
+                    </select>
+                    
                     </div>
                     <button name="btnCContato" class="btn btn-primary" type="submit">Cadastrar</button>
                   </form>

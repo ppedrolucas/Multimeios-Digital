@@ -20,6 +20,7 @@ if(isset($_SESSION['loginUser']) && (isset($_SESSION['senhaUser']))){
 </head>
 <body class="banner">    
     <div class="container">
+    <a class="voltar" title="voltar" href="../index.php"><i class="fa-solid fa-chevron-left"></i>Voltar</a>
         <div class="card">
                     <h2>Faça Login</h2>
                     
@@ -34,8 +35,11 @@ if(isset($_SESSION['loginUser']) && (isset($_SESSION['senhaUser']))){
                                         <label for="">Senha</label>
                                         <input type="password" onkeypress="$(this).mask('000000')" name="senha"/>
                                     </div>
-                                    <button name="btnlogin" class="btn" type="submit">Entrar</button>
-                                    <a href="cad_adm.php">Torne-se Adm</a>
+                                    <div class="direcionamento">
+                                        <button name="btnlogin" class="btn" type="submit">Entrar</button>
+                                        <a href="cad_adm.php">Torne-se Adm</a>
+                                    </div>
+                                    
                                 </form>
                                 <?php
                                     include_once('../config/conexao.php');

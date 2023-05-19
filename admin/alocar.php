@@ -12,8 +12,9 @@
 </head>
 <body class="banner">
     <div class="container">
+    <h2>Preencha com seu dados para confirmar<br> que deseja alocar este livro</h2>
         <div class="card">
-                    <h2>Preencha com seu dados para confirmar<br> que deseja alocar este livro</h2>
+                    
                     
                             <form class="editar" action="" method="post" enctype="multipart/form-data">
                                 

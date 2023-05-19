@@ -19,6 +19,7 @@ if(isset($_SESSION['loginUser']) && (isset($_SESSION['senhaUser']))){
 </head>
 <body class="banner">
     <div class="container">
+      
         <div class="card">
                     <h2>Faça Login</h2>
                     
@@ -33,8 +34,11 @@ if(isset($_SESSION['loginUser']) && (isset($_SESSION['senhaUser']))){
                                         <label for="">Matrícula</label>
                                         <input type="text" onkeypress="$(this).mask('0000000')" name="matricula"/>
                                     </div>
-                                    <button name="btnlogin" class="btn" type="submit">Entrar</button>
-                                    <a href="admin/index.php">Login Para Administradores</a>
+                                    <div class="direcionamento">
+                                        <button name="btnlogin" class="btn" type="submit">Entrar</button>
+                                        <a href="admin/index.php">Login Para Adm's</a>
+                                    </div>
+                                    
                                 </form>
                                 <?php
                                     include_once('config/conexao.php');

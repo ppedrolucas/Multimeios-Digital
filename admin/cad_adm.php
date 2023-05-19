@@ -10,10 +10,7 @@
     <script src="https://kit.fontawesome.com/1e32b8079d.js" crossorigin="anonymous"></script>
 </head>
 <body class="banner">
-    
-    
-    
-        
+        <a class="voltar" title="voltar" href="index.php"><i class="fa-solid fa-chevron-left"></i>Voltar</a>
     <div class="container">
         <div class="card">
                     <h2>Cadastre-se para ser Administrador</h2>
@@ -36,7 +33,6 @@
                                         <input name="senha" type="password"/>
                                     </div>
                                     <button name="btnCContato" class="btn" type="submit">Cadastrar</button>
-                                    <a href="index.php">Voltar Para Login</a>
                                 </form>
                                 <?php
                                     include_once('../config/conexao.php');

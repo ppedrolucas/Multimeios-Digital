@@ -179,15 +179,15 @@ div.insta a:hover{
                <p>E.E.E.P José Maria Falcão</p>
            </div>
     </section>
-    <section class="sobre">
+    <!--<section class="sobre">
         <h1 id="sobre">Sobre Nós</h1>
         
         <p>Nosso objetivo é promover projetos voltados para desenvolver o gosto, o interesse e a aprendizagem da leitura e da escrita.</p>
         <p>A Multimeios digital foi criada com o intúito de organizar e facilitar o processo de empréstimo do livro, podendo escolher com antecedência a obra literária de forma remota.</p>
         
-    </section>
+    </section>-->
     <section class="catalogo">
-        <h1 id="categorias">Categorias</h1>
+        <h1 id="categorias">Acervo de Livros</h1>
         <div class="colunas">
         <a href="livros/livro1.php"><article>
                             <img src="img/portfolio/divesos.png" alt="" width="250px">

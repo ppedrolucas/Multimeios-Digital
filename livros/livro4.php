@@ -29,7 +29,7 @@
                        ?>
            <div class="coluna">
                <article>
-                    <img src="../img/portfolio/cabin.png" alt="" width="200px">
+                    <img src="../img/Mobile.png" alt="" width="80px">
                     <div>
                         <h3><?php echo $show->nomeLivro;?></h3>
                         <h5>De: <?php echo $show->autorLivro;?></h5>

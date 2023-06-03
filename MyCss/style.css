@@ -39,6 +39,9 @@ div.coluna{
     padding: 6px;
     box-shadow: 3px 3px 3px 0;
 }
+.coluna article img{
+    border-radius: 5px;
+}
 article{
     padding: 6px;
     padding-bottom: 6px;
@@ -47,6 +50,7 @@ article{
 article div{
     padding: 8px;
 }
+
 button{
     background-color: green;
     border: 0;
@@ -55,6 +59,7 @@ button{
     padding: 10px;
     font-size: 12pt;
     cursor: pointer;
+    margin-top: 5px;
 }
 button:hover{
     background-color: darkgreen;

@@ -2,6 +2,7 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/Hematopoese/Multimeios-Digital)
 ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/Hematopoese/Multimeios-Digital)
 ![GitHub top language](https://img.shields.io/github/languages/top/Hematopoese/Multimeios-Digital)
+![GitHub](https://img.shields.io/github/license/Hematopoese/Multimeios-Digital)
 
 <p align="center">
   <img src=".github/Thumbnail.png" alt="Demonstração do projeto" width="100%"/>
@@ -13,14 +14,14 @@ A Multimeios Digital é uma aplicação web para auxliar na gestão de livros de
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-funcionalidades">Funcionalidades</a> • 
- <a href="#tecnologias">Tecnologias</a> • 
- <a href="#contribuicao">Contribuição</a> • 
- <a href="#licenc-a">Licença</a> • 
- <a href="#autor">Autor</a>
+ <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-licenc-a">Licença</a> • 
 </p>
 
 
-##	🚧  Mutimeios Digital 🚀 Em construção...  🚧
+<h4 align="center">
+  🚧  Mutimeios Digital 🚀 Em construção...  🚧
+</h4>
 
 ## 🛠️ Funcionalidades
 
@@ -42,3 +43,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Bootstrap](https://getbootstrap.com/)
 - [jQuery](https://jquery.com/)
+
+## 📝 Licença
+
+Este projeto esta sobe a licença [MIT](./LICENSE).
+
+Feito com ❤️ por Pedro Lucas 👋🏽 [Entre em contato!](https://www.linkedin.com/in/pedro-lucas-26b194267/)
+

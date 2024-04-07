@@ -1,0 +1,15 @@
+{
+  "version": "33.7.0",
+  "builds": [
+    {
+      "src": "index.php",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "(.*)",
+      "dest": "index.php"
+    }
+  ]
+}

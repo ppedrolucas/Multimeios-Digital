@@ -1,5 +1,5 @@
 {
-  "version": "33.7.0",
+  "version": "3",
   "builds": [
     {
       "src": "index.php",

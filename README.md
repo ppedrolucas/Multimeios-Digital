@@ -12,7 +12,7 @@
 
 ## 🖥️ Sobre o Projeto
 
-A Multimeios Virtual é uma aplicação web projetada para transformar atividades complexas de gerenciamento e monitoramento de empréstimos de livros de uma biblioteca, de forma facilitada e totalmente On-line. 
+A Multimeios Virtual é uma aplicação web projetada para transformar atividades complexas de gerenciamento e monitoramento de empréstimos de livros de uma biblioteca, de forma facilitada e totalmente On-line.
 
 ## 🚧 Status
 
@@ -37,15 +37,14 @@ Este projeto pode ser visualizado tanto no serviço de hospedagem [Vercel](https
 
 As seguintes ferramentas serão usadas para o desenvolvimento do projeto:
 
-- [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-- [Tailwindcss](https://tailwindcss.com)
-- [PHP](https://www.php.net/)
-- [phpMyAdmin](http://www.phpmyadmin.net)
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [jQuery](https://jquery.com/)
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=js,php,tailwindcss,jquery,figma," />
+  </a>
+</p>
 
 ## 📝 Licença
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
 
-Feito com ❤️ por Pedro Lucas 👋🏽 [Entre em contato!](https://www.linkedin.com/in/pedro-lucas-26b194267/)
+Feito com ❤️ por Pedro Lucas 👋🏽 [Entre em contato!](https://www.instagram/ppedrolucas_/)

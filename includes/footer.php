@@ -9,20 +9,27 @@
         font-family: 'Josefin Sans', sans-serif;
     }
 footer div.insta{
-    background: #23232e;
+    background-image: linear-gradient(90deg, #00292E, #17DA48, #5EFF86);
     color: #fff;
+    font-size: 14px;
     width: 100%;
-    height: 100px;
+    height: 96px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    padding: 32px;
       
 }
 
 </style>
 <footer>
         <div class="insta">
-            <p>Todos os direitos reservados</p>
+            <p>&copy; <span id="ano"></span> Todos os direitos reservados</p>
         </div>
-    </footer>
+</footer>
+<script>
+    var data = document.getElementById('ano')
+    var year = new Date()
+    var newAno = year.getFullYear()
+
+    data.innerHTML = newAno
+</script>

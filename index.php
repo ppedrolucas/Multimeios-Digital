@@ -24,16 +24,16 @@ if(isset($_SESSION['loginUser']) && (isset($_SESSION['senhaUser']))){
         <div class="bg-white rounded-lg p-4 w-80 flex flex-col">
             <h2 class="text-2xl font-bold text-center mb-4">Sign In</h2>
                 <form action="" method="post" enctype="multipart/form-data">
-                    <div class="w-full mb-4">
+                    <div class="w-full mb-6">
                         <label for="name" class="text-sm/6 font-medium text-gray-900">Usuário</label>
                         <input id="name" name="nome" type="text" class="w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-500 sm:text-sm/6" required/>
                     </div>
-                    <div class="w-full mb-4">
+                    <div class="w-full mb-6">
                         <label for="matricula" class="text-sm/6 font-medium text-gray-900">Senha</label>
                         <input id="matricula" type="password" onkeypress="$(this).mask('0000000')" name="matricula" class="w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-500 sm:text-sm/6" required/>
                     </div>
-                    <div class="w-full mb-4">
-                        <button name="btnlogin" class="w-full rounded-md px-3 py-1.5 bg-green-500 text-white font-medium text-sm/6" type="submit">Entrar</button>
+                    <div class="w-full mb-6">
+                        <button name="btnlogin" class="w-full rounded-md px-3 py-1.5 bg-green-500 hover:bg-green-400 text-white font-medium text-sm/6" type="submit">Entrar</button>
                         <!-- <a href="admin/index.php">Login Para Adm's</a> -->
                     </div>
                 </form>

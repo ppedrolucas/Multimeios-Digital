@@ -18,23 +18,19 @@ include_once('sair.php')
     <title>Multimeios Digital | Home</title>
 </head>
 <body>
-    
-    <header class="w-full bg-gray-100">
-        <nav  class="container max-w-5xl p-4 mx-auto flex justify-between items-center">
-            <h1 class="cartaoPostal">Olá <?php echo $_SESSION['loginUser']?>, seja bem-vindo a Multimeios digital!</h1>
+    <header class="w-full bg-gray-800">
+        <nav  class="container  mx-auto lg:w-5xl p-4 h-16 flex justify-end items-center text-white">
             <ul>
-                <li><a href="?sair">Sair</a></li>
+                <li class="hover:text-green-500"><a href="?sair">Sair</a> </li>
             </ul>
         </nav>
     </header>
-    <section class="banner">
-    <div class="box">
-               
-               <img style="width: 190px; border-radius: 100%; margin-bottom: 80px" src="img/l0g02.png" alt="..." />
-               <!-- Masthead Heading-->
-               <h1>Multimeios Digital</h1>
-               <p>E.E.E.P José Maria Falcão</p>
-           </div>
+    <section>
+        <div class="container mx-auto p-4 mt-16 mb-20 lg:w-5xl">
+            <p class="text-sm mb-2 font-semibold text-blue-700">E.E.E.P José Maria Falcão</p>
+            <h1 class="text-3xl font-bold mb-2 text-gray-900">Olá <?php echo $_SESSION['loginUser']?></h1>
+            <h2 class="text-xl mb-4 font-medium text-gray-500">Seja bem-vindo(a) a Multimeios digital!</h2>
+        </div>
     </section>
     <!--<section class="sobre">
         <h1 id="sobre">Sobre Nós</h1>
@@ -43,38 +39,54 @@ include_once('sair.php')
         <p>A Multimeios digital foi criada com o intúito de organizar e facilitar o processo de empréstimo do livro, podendo escolher com antecedência a obra literária de forma remota.</p>
         
     </section>-->
-    <section class="catalogo">
-        <h1 id="categorias">Acervo de Livros</h1>
-        <div class="colunas">
-        <a href="livros/livro1.php"><article>
-                            <img src="img/portfolio/divesos.png" alt="" width="250px">
-                            <h3>Assuntos Diversos</h3>
-                        </article>
+    <section>
+        <h1 class="text-center text-3xl font-bold mb-20 text-gray-900">Acervo de Livros</h1>
+        <div class="container  p-4 mx-auto grid grid-cols-1 md:grid-cols-3 md: lg:grid-cols-4 lg:w-5xl lg:gap-4 gap-8">
+            <figure class="relative rounded-lg overflow-hidden">
+                <a href="livros/livro1.php">
+                    <img class="w-full h-48 object-cover" src="assets/img/divesos.png" alt="">
                 </a>
-                <a href="livros/livro2.php"><article>
-                            <img src="img/portfolio/biografia.png" alt="" width="250px">
-                            <h3>Biografia</h3>
-                        </article>
+                <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
+                    <span>Assuntos diversos</span>
+                </figcaption>
+            </figure>
+                
+            <figure class="relative rounded-lg overflow-hidden">
+                <a href="livros/livro2.php">
+                    <img class="w-full h-48 object-cover" src="assets/img/biografia.png" alt="">
                 </a>
-            <a href="livros/livro3.php"><article>
-                            <img src="img/portfolio/cienciasSociais.png" alt="" width="250px">
-                            <h3>Ciências Humanas e Sociais</h3>
-                        </article>
+                <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
+                    <span>Biografia</span>
+                </figcaption>
+            </figure>
+
+            <figure class="relative rounded-lg overflow-hidden">
+                <a href="livros/livro3.php">
+                    <img class="w-full h-48 object-cover" src="assets/img/cienciasSociais.png" alt="">
                 </a>
-            <a href="livros/livro4.php"><article>
-                            <img src="img/portfolio/cienciasDaNatureza.png" alt="" width="250px">
-                            <h3>Ciências da Natureza</h3>
-                        </article>
-                </a>
+                <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
+                    <span>Ciências Humanas e Sociais</span>
+                </figcaption>
+            </figure>
             
-        </div>
-        <div class="colunas">
-        <a href="livros/livro5.php"><article>
-                            <img src="img/portfolio/colecao.png" alt="" width="250px">
-                            <h3>Redação</h3>
-                        </article>
+            <figure class="relative rounded-lg overflow-hidden">
+                <a href="livros/livro4.php">
+                    <img class="w-full h-48 object-cover" src="assets/img/cienciasDaNatureza.png" alt="">
                 </a>
-                <a href="livros/livro6.php"><article>
+                <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
+                    <span>Ciências da Natureza</span>
+                </figcaption>
+            </figure>
+
+            <figure class="relative rounded-lg overflow-hidden">
+                <a href="livros/livro5.php">
+                    <img class="w-full h-48 object-cover" src="assets/img/colecao.png" alt="">
+                </a>
+                <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
+                    <span>Redação</span>
+                </figcaption>
+            </figure>
+                <!-- <a href="livros/livro6.php"><article>
                             <img src="img/portfolio/circus.png" alt="" width="250px">
                             <h3>Crônica</h3>
                         </article>
@@ -90,8 +102,7 @@ include_once('sair.php')
                         </article>
                 </a>
             
-        </div>
-        <div class="colunas">
+    
         <a href="livros/livro9.php"><article>
                             <img src="img/portfolio/eixotecnico.png" alt="" width="250px">
                             <h3>Eixo Técnico</h3>
@@ -113,8 +124,7 @@ include_once('sair.php')
                         </article>
                 </a>
             
-        </div>
-        <div class="colunas">
+      
         <a href="livros/livro13.php"><article>
                             <img src="img/portfolio/formacaoProfessores.png" alt="" width="250px">
                             <h3>Formação de Professores</h3>
@@ -134,15 +144,15 @@ include_once('sair.php')
                             <img src="img/portfolio/rom.png" alt="" width="250px">
                             <h3>Romances</h3>
                         </article>
-                </a>
+                </a> -->
             
         </div>
     </section>
-    <footer>
-        <div class="insta">
+    <footer class="w-full h-32 flex items-center">
+        <div class="container p-4 mx-auto border-t lg:w-5xl">
             <!--<h4>Estamos no instagram!</h4>
             <a href="https://instagram.com/multimeios_jmf?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram"></i></a>-->
-            <p>Todos os direitos reservados</p>
+            <p>&copy; Todos os direitos reservados</p>
         </div>
     </footer>
 </body>

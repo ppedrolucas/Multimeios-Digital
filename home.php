@@ -15,35 +15,80 @@ include_once('sair.php')
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/1e32b8079d.js" crossorigin="anonymous"></script>
+    <script src="js/components/footer.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
     <title>Multimeios Digital | Home</title>
 </head>
-<body>
-    <header class="w-full bg-gray-800">
-        <nav  class="container  mx-auto lg:w-5xl p-4 h-16 flex justify-end items-center text-white">
+<body class="bg-white text-gray-900 tracking-wide">
+    <?php
+        include_once('config/conexao.php');
+        $select = "SELECT cateLivro FROM livros";
+
+        try{
+            $resultado = $conect->prepare($select);
+            $resultado->execute();
+            $contar = $resultado->rowCount();
+            if($contar > 0){
+                while($show = $resultado->FETCH(PDO::FETCH_OBJ)){
+                                
+                    }
+            }else{
+                echo 'NÃO DEU CERTO';
+            }
+        }catch(PDOException $e){
+            echo '<strong>ERRO DE PDO= </strong>'.$e->getMessage();
+        }
+    ?>
+    <header class="w-full bg-white shadow-xl fixed md:relative top-0 z-40">
+        <nav  class="container mx-auto lg:w-5xl p-4 h-16 flex items-center text-white">
             <ul>
-                <li class="hover:text-green-500"><a href="?sair">Sair</a> </li>
+                <li class="relative">
+                    <div class="flex items-center gap-1 cursor-pointer" >
+                        <img class="w-10 rounded-full" src="assets/avatar.jpg">
+                        <p class="text-gray-900 font-medium text-sm"><?php echo $_SESSION['loginUser']?></p>
+                        <img src="assets/icons/dropdown-arrow.svg" onclick="dropdown()">
+                    </div>
+                     <ul id="drop" class="absolute border border-gray-100 bg-white shadow-2xl  w-full p-2 mt-1.5 rounded-lg scale-0 transition">
+                        <li class="text-gray-600 text-sm hover:text-green-500"><a href="?sair">Sair</a></li>
+                     </ul>
+                </li>
             </ul>
         </nav>
     </header>
     <section>
-        <div class="container mx-auto p-4 mt-16 mb-20 lg:w-5xl">
-            <p class="text-sm mb-2 font-semibold text-blue-700">E.E.E.P José Maria Falcão</p>
-            <h1 class="text-3xl font-bold mb-2 text-gray-900">Olá <?php echo $_SESSION['loginUser']?></h1>
-            <h2 class="text-xl mb-4 font-medium text-gray-500">Seja bem-vindo(a) a Multimeios digital!</h2>
+        <div class="container mx-auto p-4 mt-16 lg:w-5xl">
+            <p class="text-sm mb-2 md:text-base font-semibold text-blue-500">E.E.E.P José Maria Falcão</p>
+            <h1 class="text-3xl md:text-5xl lg:text-7xl font-bold mb-4">Olá <?php echo $_SESSION['loginUser']?></h1>
+            <h2 class="text-xl mb-8 font-medium text-gray-500">Seja bem-vindo(a) a Multimeios digital!</h2>
         </div>
     </section>
-    <!--<section class="sobre">
-        <h1 id="sobre">Sobre Nós</h1>
-        
-        <p>Nosso objetivo é promover projetos voltados para desenvolver o gosto, o interesse e a aprendizagem da leitura e da escrita.</p>
-        <p>A Multimeios digital foi criada com o intúito de organizar e facilitar o processo de empréstimo do livro, podendo escolher com antecedência a obra literária de forma remota.</p>
-        
-    </section>-->
+    <section class="aside">
+        <div class="container mx-auto p-4 lg:w-5xl">
+            <div class="grid gap-4 mb-20">
+                <div class="flex gap-1">
+                    <img src="assets/icons/check-list.svg" alt="">
+                    <p>Acesse de qualquer lugar</p>
+                </div>
+                <div class="flex gap-1">
+                    <img src="assets/icons/check-list.svg" alt="">
+                    <p>Garanta seu livro na palma da mão</p>
+                </div>
+                <div class="flex gap-1">
+                    <img src="assets/icons/check-list.svg" alt="">
+                    <p>Navegue e encontre o que deseja</p>
+                </div>
+                <div class="flex gap-1">
+                    <img src="assets/icons/check-list.svg" alt="">
+                    <p>Veja os melhores dos melhores da Multimeios</p>
+                </div>
+            </div>
+        </div>    
+    </section>
     <section>
-        <h1 class="text-center text-3xl font-bold mb-20 text-gray-900">Acervo de Livros</h1>
+        <h1 class="text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-20 lg:mb-16 text-gray-900">Acervo de Livros</h1>
         <div class="container  p-4 mx-auto grid grid-cols-1 md:grid-cols-3 md: lg:grid-cols-4 lg:w-5xl lg:gap-4 gap-8">
             <figure class="relative rounded-lg overflow-hidden">
-                <a href="livros/livro1.php">
+                <a href="book.php">
                     <img class="w-full h-48 object-cover" src="assets/img/divesos.png" alt="">
                 </a>
                 <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
@@ -86,11 +131,16 @@ include_once('sair.php')
                     <span>Redação</span>
                 </figcaption>
             </figure>
-                <!-- <a href="livros/livro6.php"><article>
-                            <img src="img/portfolio/circus.png" alt="" width="250px">
-                            <h3>Crônica</h3>
-                        </article>
+
+            <figure class="relative rounded-lg overflow-hidden">
+                <a href="livros/livro6.php">
+                    <img class="w-full h-48 object-cover" src="assets/img/circus.png" alt="">
                 </a>
+                <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
+                    <span>Crônica</span>
+                </figcaption>
+            </figure>
+                <!-- 
             <a href="livros/livro7.php"><article>
                             <img src="img/portfolio/cultura.png" alt="" width="250px">
                             <h3>Cultura</h3>
@@ -148,12 +198,8 @@ include_once('sair.php')
             
         </div>
     </section>
-    <footer class="w-full h-32 flex items-center">
-        <div class="container p-4 mx-auto border-t lg:w-5xl">
-            <!--<h4>Estamos no instagram!</h4>
-            <a href="https://instagram.com/multimeios_jmf?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram"></i></a>-->
-            <p>&copy; Todos os direitos reservados</p>
-        </div>
-    </footer>
+    <new-footer></new-footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

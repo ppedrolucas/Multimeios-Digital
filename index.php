@@ -33,7 +33,7 @@ if(isset($_SESSION['loginUser']) && (isset($_SESSION['senhaUser']))){
                         <input id="matricula" type="password" onkeypress="$(this).mask('0000000')" name="matricula" class="w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-green-500 sm:text-sm/6" required/>
                     </div>
                     <div class="w-full mb-6">
-                        <button name="btnlogin" class="w-full rounded-md px-3 py-1.5 bg-green-500 hover:bg-green-400 text-white font-medium text-sm/6" type="submit">Entrar</button>
+                        <button name="btnlogin" class="transition w-full rounded-md px-3 py-1.5 bg-green-500 hover:bg-green-400 text-white font-medium text-sm/6" type="submit">Entrar</button>
                         <!-- <a href="admin/index.php">Login Para Adm's</a> -->
                     </div>
                 </form>

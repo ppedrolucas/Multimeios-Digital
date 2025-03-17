@@ -16,7 +16,7 @@ include_once('sair.php')
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/1e32b8079d.js" crossorigin="anonymous"></script>
     <script src="js/components/footer.js"></script>
-    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
     <title>Multimeios Digital | Home</title>
 </head>
 <body class="bg-white text-gray-900 tracking-wide">
@@ -88,7 +88,7 @@ include_once('sair.php')
         <h1 class="text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-20 lg:mb-16 text-gray-900">Acervo de Livros</h1>
         <div class="container  p-4 mx-auto grid grid-cols-1 md:grid-cols-3 md: lg:grid-cols-4 lg:w-5xl lg:gap-4 gap-8">
             <figure class="relative rounded-lg overflow-hidden">
-                <a href="book.php">
+                <a href="pages/book.php">
                     <img class="w-full h-48 object-cover" src="assets/img/divesos.png" alt="">
                 </a>
                 <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
@@ -97,7 +97,7 @@ include_once('sair.php')
             </figure>
                 
             <figure class="relative rounded-lg overflow-hidden">
-                <a href="livros/livro2.php">
+                <a href="pages/book2.php">
                     <img class="w-full h-48 object-cover" src="assets/img/biografia.png" alt="">
                 </a>
                 <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
@@ -106,7 +106,7 @@ include_once('sair.php')
             </figure>
 
             <figure class="relative rounded-lg overflow-hidden">
-                <a href="livros/livro3.php">
+                <a href="pages/book3.php">
                     <img class="w-full h-48 object-cover" src="assets/img/cienciasSociais.png" alt="">
                 </a>
                 <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
@@ -115,7 +115,7 @@ include_once('sair.php')
             </figure>
             
             <figure class="relative rounded-lg overflow-hidden">
-                <a href="livros/livro4.php">
+                <a href="pages/book4.php">
                     <img class="w-full h-48 object-cover" src="assets/img/cienciasDaNatureza.png" alt="">
                 </a>
                 <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
@@ -124,7 +124,7 @@ include_once('sair.php')
             </figure>
 
             <figure class="relative rounded-lg overflow-hidden">
-                <a href="livros/livro5.php">
+                <a href="pages/book5.php">
                     <img class="w-full h-48 object-cover" src="assets/img/colecao.png" alt="">
                 </a>
                 <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
@@ -133,11 +133,20 @@ include_once('sair.php')
             </figure>
 
             <figure class="relative rounded-lg overflow-hidden">
-                <a href="livros/livro6.php">
+                <a href="pages/book6.php">
                     <img class="w-full h-48 object-cover" src="assets/img/circus.png" alt="">
                 </a>
                 <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
                     <span>Crônica</span>
+                </figcaption>
+            </figure>
+
+            <figure class="relative rounded-lg overflow-hidden">
+                <a href="pages/book7.php">
+                    <img class="w-full h-48 object-cover" src="assets/img/ficcaoCientifica.png" alt="">
+                </a>
+                <figcaption class="absolute bottom-0 w-full px-4 py-2 text-white font-semibold text-lg bg-linear-to-b to-gray-900 ">
+                    <span>Ficção Científica</span>
                 </figcaption>
             </figure>
                 <!-- 

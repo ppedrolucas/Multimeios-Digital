@@ -16,7 +16,7 @@ include_once('sair.php')
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/1e32b8079d.js" crossorigin="anonymous"></script>
     <script src="js/components/footer.js"></script>
-    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+    <link rel="stylesheet" href="styles/style.css">
     <title>Multimeios Digital | Home</title>
 </head>
 <body class="bg-white text-gray-900 tracking-wide">

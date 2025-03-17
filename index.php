@@ -47,7 +47,9 @@ if(isset($_SESSION['loginUser']) && (isset($_SESSION['senhaUser']))){
                                         if($acao == 'negado'){
                                             echo 'Erro ao acessar o sistema! Efetue o login <3';
                                         }else if($acao == 'sair'){
-                                            echo '<p class="font-medium text-xs text-blue-700">Sessão encerrada com sucesso</p>';
+                                            echo "<div class='w-full h-16 flex items-center px-4 bg-blue-400 rounded-lg'>
+                                                        <p class='font-medium text-sm text-white'>Sessão encerrada com sucesso</p>
+                                                    </div>";
                                         }
                                     }
 
@@ -69,11 +71,15 @@ if(isset($_SESSION['loginUser']) && (isset($_SESSION['senhaUser']))){
                                             $_SESSION['loginUser'] = $login;
                                             $_SESSION['senhaUser'] = $senha;
                               
-                                            echo "<p class='font-medium text-xs text-blue-700'>Seja bem-vindo(a) ao centro de Multimeios Digital :)</p>";
+                                            echo "<div class='w-full h-16 flex items-center px-4 bg-green-400 rounded-lg'>
+                                                        <p class='font-medium text-sm text-white'>Seja bem-vindo(a) à Multimeios Digital :)</p>
+                                                    </div>";
                                           
                                             header("Refresh: 3, home.php?acao=welcome");
                                           }else{
-                                              echo "<p class='font-medium text-xs text-red-500'>Usuário inválido</p>";
+                                              echo "<div class='w-full h-16 flex items-center px-4 bg-red-400 rounded-lg'>
+                                                        <p class='font-medium text-sm text-white'>Usuário inválido</p>
+                                                    </div>";
                                            
                                           }
                                         } catch(PDOException $e){

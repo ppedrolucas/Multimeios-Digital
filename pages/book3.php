@@ -60,7 +60,7 @@ include_once('../sair.php')
                         <h5>local: <?php echo $show->localLivro;?></h5>
                         <h5>editora: <?php echo $show->editLivro;?></h5>
                         <h5>ano de publicação: <?php echo $show->anoLivro;?></h5>
-                        <button name="btnAlocar" type="submit" class="transition rounded-md px-3 py-1.5 bg-green-500 hover:bg-green-400 text-white font-medium text-sm/6"><a title="Alocar" href="../admin/alocar.php?idLivro=<?php echo $show->idLivro;?>">Alocar</a></button>
+                        <button name="btnAlocar" type="submit" class="transition rounded-md px-3 py-1.5 bg-green-500 hover:bg-green-400 text-white font-medium text-sm/6"><a title="Alocar" href="../request_form.php?idLivro=<?php echo $show->idLivro;?>">Alocar</a></button>
                     </div>
                </div>
             </div>
